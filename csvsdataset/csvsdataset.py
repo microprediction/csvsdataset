@@ -77,8 +77,8 @@ class CsvsDataset(Dataset):
             if len(self.cache) > self.cache_capacity:
                 _ = self.cache.popitem(last=False)
 
-        x_data = df.loc[row_index, self.x_columns].to_numpy()
-        y_data = df.loc[row_index, self.y_columns].to_numpy()
+        x_data = df.loc[row_index, self.x_columns].to_numpy().astype(float)
+        y_data = df.loc[row_index, self.y_columns].to_numpy().astype(float)
 
         return x_data, y_data
 
