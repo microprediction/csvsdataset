@@ -1,2 +1,2 @@
 # csvsdataset
-Dataset from multiple CSV files
+Create torch datasets from multiple csv files
