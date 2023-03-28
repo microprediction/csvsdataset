@@ -29,7 +29,7 @@ pip install csvsdataset
         x_data, y_data = dataset[42]
 
 ### Memory frugality
-Only data from a small number of csv files is maintained in memory. The
+Only data from a small number of csv files are maintained in memory. The
 rest is discarded on a LRU basis. This class is intended for use
 when a very large number of data files exist which cannot be loaded into
 memory conveniently. 
