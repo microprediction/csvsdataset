@@ -12,6 +12,8 @@ class CsvsDataset(Dataset):
                         x_columns=None, x_columns_pattern=None,
                         y_column=None, y_columns=None, y_columns_pattern=None, cache_capacity=3):
         self.file_paths = sorted(glob.glob(os.path.join(folder_path, file_pattern)))
+        if len(self.file_paths)==0:
+            raise ValueError('Expression {file_pattern} has no matches in {folder_path}')
         self.num_rows_per_file = [self._get_num_rows(file) for file in self.file_paths]
         self.total_rows = sum(self.num_rows_per_file)
 
