@@ -12,7 +12,9 @@ def test_csvsdataset():
     x_columns_pattern = r'col_\d+'
     y_column = 'col_2'
 
-    dataset = CsvsDataset(folder_path=folder_path, file_pattern=file_pattern, x_columns_pattern=x_columns_pattern, y_column=y_column)
+    dataset = CsvsDataset(folder_path=folder_path, file_pattern=file_pattern,
+                          x_columns_pattern=x_columns_pattern, y_column=y_column,
+                          cache_capacity=1)
 
     print(f"Number of files in dataset: {len(dataset.file_paths)}")
     print(f"Total number of rows in dataset: {len(dataset)}")
@@ -24,9 +26,9 @@ def test_csvsdataset():
 
     # Test cache functionality
     assert 1 not in dataset.cache, "Index 0 should not be in the cache initially"
-    x_data, y_data = dataset[5000]
-    x_data, y_data = dataset[8000]
-    x_data, y_data = dataset[11000]
+    x_data, y_data = dataset[3000]
+    x_data, y_data = dataset[3033]
+    x_data, y_data = dataset[3038]
     assert 0 not in dataset.cache
 
 
