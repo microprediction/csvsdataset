@@ -21,7 +21,7 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
     ],
-    packages=["csvsdataset"],
+    packages=["csvsdataset","csvsdataset.testdata"],
     test_suite='pytest',
     tests_require=['pytest','memory_profiler'],
     include_package_data=True,
