@@ -1,4 +1,4 @@
-from csvsdataset.csvsdataset import CsvsDataset
+from csvsdataset import CsvsDataset
 from csvsdataset.whereami import TESTDATA
 import os
 
