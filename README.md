@@ -2,6 +2,8 @@
 
 `csvsdataset` is a Python library designed to simplify the process of working with multiple CSV files as a single dataset. The primary functionality is provided by the `CsvsDataset` class in the `csvsdataset.py` module.
 
+This was written by ChatGPT4 as mentioned [here](https://www.linkedin.com/posts/petercotton_chatgpt4-opensource-python-activity-7047184874163597312-JTr3?utm_source=share&utm_medium=member_desktop). Issues will be cut and paste into a session. It is an experiment in semi-autonomous code maintenance.
+
 ## Installation
 
 To install the `csvsdataset` library, simply run:
