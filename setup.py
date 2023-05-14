@@ -7,7 +7,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="csvsdataset",
-    version="0.0.6",
+    version="0.0.7",
     description="Memory frugal torch dataset from a csv collection",
     long_description=README,
     long_description_content_type="text/markdown",
