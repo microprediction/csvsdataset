@@ -52,7 +52,8 @@ class CsvsDataset(Dataset):
     def _calculate_cumulative_rows(self):
         cumulative_rows = [0]
         for file_path in self.file_paths:
-            num_rows = sum(1 for _ in open(file_path)) - 1  # -1 to exclude header row
+            with open(file_path) as f:
+                num_rows = sum(1 for _ in f) - 1  # -1 to exclude header row
             cumulative_rows.append(cumulative_rows[-1] + num_rows)
         return cumulative_rows
 
